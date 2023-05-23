@@ -1,0 +1,228 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+ 
+ /* Define custom fonts */
+ @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+ 
+ /* Define variables for colors */
+ :root {
+   --primary-color: #FFC0CB; /* pastel pink */
+   --secondary-color: #87CEFA; /* pastel blue */
+   --tertiary-color: #FDF5E6; /* pastel yellow */
+   --quaternary-color: #E6E6FA; /* pastel purple */
+   --new-color: #FFD166; /* pastel orange */
+   --white-color: #FFFFFF;
+   --black-color: #333333;
+ }
+ 
+ /* Define global styles */
+ body {
+   font-family: 'Quicksand', sans-serif;
+   font-size: 16px;
+   background-color: var(--white-color);
+   color: var(--black-color);
+ }
+ 
+ .container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 20px;
+ }
+ 
+ /* Use semantic elements for header and nav */
+ header {
+   background-color: var(--tertiary-color);
+   padding: 10px 0;
+ }
+ 
+ .logo {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+ 
+ .logo img {
+   width: 50px;
+   height: auto;
+   margin-right: 10px;
+ }
+ 
+ .logo span {
+   font-size: clamp(1.5rem,4vw,2.4rem); /* use clamp function for responsive font size */
+   font-weight:bold;  
+   color :var(--primary-color);
+ }
+ nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-item {
+  margin: 0 10px;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.menu-item a:hover {
+   color: var(--primary-color);
+}
+
+/* Use semantic elements for sections */
+section {
+   padding: 40px;
+   background-color: var(--quaternary-color);
+   border-radius: 10px;
+   margin-bottom: 20px;
+ }
+
+.about-content {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+ }
+
+.about-image img {
+   width: 300px;
+   height: auto;
+   border-radius: 50%;
+   margin-right: 20px;
+   margin-bottom: 20px;
+ }
+
+.about-text {
+   flex-basis: calc(100% - (300px +20px)); /* subtract image width and margin from container width */
+   text-align: center;
+   color: var(--primary-color: #FFC0CB;)
+ }
+
+h1 {
+   font-size: clamp(2rem,5vw,4rem); /* use clamp function for responsive font size */
+   font-weight:bold;  
+   color :var(--primary-color); 
+   text-align :center; 
+   margin-bottom :20px; 
+ }
+
+p {
+   margin-bottom: 10px;
+ }
+
+.title {
+   text-align:left; 
+   font-size : clamp(2rem,5vw,4rem); 
+   font-weight:bold; 
+   color :var(--secondary-color); 
+   margin-bottom :20px; 
+ }
+
+.project-title {
+    text-align:left; 
+    font-size : clamp(1.5rem,3vw,2.4rem); 
+    font-weight:bold; 
+    color :var(--primary-color); 
+    margin-bottom :20px; 
+    transition : transform .3s ease-in-out , box-shadow .3s ease-in-out; /* add transition effect for hover state */
+ }
+ 
+.project-list {
+    margin-bottom :30px; 
+    list-style-type:none; 
+ }
+ 
+.project-link-container {
+    margin-right :20px; 
+    margin-left :20px; 
+    list-style-type:none; 
+ }
+ 
+ 
+.project-link {
+    display:inline-block; 
+    padding :10px .5em; /* use em unit for horizontal padding based on font size */
+    border-radius :10px;  
+    color :var(--white-color); 
+    text-decoration:none; 
+    transition : background-color .3s ease-in-out , box-shadow .3s ease-in-out , transform .3s ease-in-out ; /* add transition effect for hover state */
+    box-shadow :0 .125em .25em rgba(0 ,0 ,0 ,.1); /* use em unit for shadow based on font size */
+    margin-bottom :20px; 
+ }
+ 
+.pink {
+    background-color :var(--primary-color); 
+ }
+ 
+.blue {
+    background-color :var(--secondary-color); 
+ }
+ 
+.yellow {
+    background-color :var(--tertiary-color); 
+ }
+ 
+
+.project-link:hover {
+     background-color :var(--primary-color); /* make all links pink when hovered */
+     transform :scale(1.1); /* make link grow by 10% when hovered */
+     box-shadow :0 .25em .5em rgba(0 ,0 ,0 ,.2); /* increase shadow size when hovered */
+ }
+
+.contact-info {
+  text-align:center; 
+}
+
+.contact-info p {
+  margin-bottom :10px; 
+}
+
+/* Add a comment to separate the footer section from the rest of the CSS code */
+/* Footer section */
+
+/* Add an id attribute to the footer element */  
+/* Add a margin-top property to create some space between it and the previous section */  
+/* Change the font size to use em units instead of pixels */  
+#footer {
+  background-color: var(--tertiary-color);
+  padding: 10px 0;
+  text-align: center;
+  font-size: .875em; /* equivalent to 14px */
+  color: var(--secondary-color);
+  margin-top: 20px;
+}
+
+/* Define a keyframe animation for fading in */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to the about section when it is in the viewport */
+/* Use a class of animate for specificity */
+.about.animate {
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+
+/* Define a transition for changing color */
+.transition {
+  transition-property: color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+/* Apply the transition to the menu items when they are hovered */
+.menu-item a.transition:hover {
+  color: var(--primary-color);
+}
