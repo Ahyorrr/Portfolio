@@ -226,3 +226,83 @@ p {
 .menu-item a.transition:hover {
   color: var(--primary-color);
 }
+
+/* Use media queries to change the layout and font size of the web page depending on the screen width */
+
+/* Small mobile devices (320px and up) */
+@media only screen and (min-width:320px) {
+  /* Use flexbox to create a column layout for the about section */
+  .about-content {
+    flex-direction: column;
+  }
+
+  /* Use grid to create a two-column layout for each project list */
+  .project-list ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+
+  /* Reduce the font size of the headings and paragraphs */
+  h1, h2, h3, p, .logo span, .project-link, .contact-info p, #footer p {
+    font-size: 0.75em;
+  }
+}
+
+/* Large mobile devices (480px and up) */
+@media only screen and (min-width:480px) {
+  /* Use grid to create a three-column layout for each project list */
+  .project-list ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Increase the font size of the headings and paragraphs */
+  h1, h2, h3, p, .logo span, .project-link, .contact-info p, #footer p {
+    font-size: 0.875em;
+  }
+}
+
+/* Tablet devices (768px and up) */
+@media only screen and (min-width:768px) {
+  /* Use flexbox to create a row layout for the about section */
+  .about-content {
+    flex-direction: row;
+  }
+
+  /* Use grid to create a four-column layout for each project list */
+  .project-list ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Increase the font size of the headings and paragraphs */
+  h1, h2, h3, p, .logo span, .project-link, .contact-info p, #footer p {
+    font-size: 1em;
+  }
+}
+
+/* Laptop devices (1024px and up) */
+@media only screen and (min-width:1024px) {
+  /* Use grid to create a six-column layout for each project list */
+  .project-list ul {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  /* Increase the font size of the headings and paragraphs */
+  h1, h2, h3, p, .logo span, .project-link, .contact-info p, #footer p {
+    font-size: 1.125em;
+  }
+}
+
+/* Desktop devices (1200px and up) */
+@media only screen and (min-width:1200px) {
+  /* Use grid to create an eight-column layout for each project list */
+  .project-list ul {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  /* Increase the font size of the headings and paragraphs */
+  h1, h2, h3, p, .logo span, .project-link, .contact-info p, #footer p {
+    font-size: 1.25em;
+  }
+}
+
