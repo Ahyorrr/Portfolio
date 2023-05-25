@@ -100,7 +100,8 @@ section {
 .about-text {
    flex-basis: calc(100% - (300px +20px)); /* subtract image width and margin from container width */
    text-align: center;
-   color: var(--primary-color: #FFC0CB;)
+   font-weight:bold; 
+   color :var(--primary-color);
  }
 
 h1 {
