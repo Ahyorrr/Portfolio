@@ -230,30 +230,12 @@ p {
 /* Use media queries to change the layout and font size of the web page depending on the screen width */
 
  
-/* Large mobile devices (480px and up) */
-@media only screen and (min-width:480px)  
-   /* Increase the font size of the headings and paragraphs */
-  h1, h2, h3, p, .logo span, .project-link, .contact-info p, #footer p {
-    font-size: 0.875em;
-  }
-   .about-text {
-     
-      text-align: left;
-     }
-}
-
-/* Tablet devices (768px and up) */
-@media only screen and (min-width:768px) {
-  /* Use flexbox to create a row layout for the about section */
-  .about-content {
-    flex-direction: row;
-  }
-
-  
-  /* Increase the font size of the headings and paragraphs */
-  h1, h2, h3, p, .logo span, .project-link, .contact-info p, #footer p {
-    font-size: 1em;
+@media (max-width: 600px) {
+  .about-text {
+    flex-basis: 100%;
+    /* make the text take up the full width on small screens */
   }
 }
+
 
  
