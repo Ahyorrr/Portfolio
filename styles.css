@@ -97,6 +97,22 @@ section {
    margin-bottom: 20px;
    object-fit: cover;
  }
+.about-image img:hover {
+  transform: scale(1.1);
+  /* make the image slightly bigger when hovered */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  /* add a shadow effect when hovered */
+}
+
+.about-image img:active {
+  transform: scale(0.9);
+  /* make the image slightly smaller when clicked */
+}
+
+.about-image img:focus {
+  outline: 3px solid var(--primary-color);
+  /* add an outline when focused */
+}
 
 .about-text {
    flex-basis: calc(100% - (300px +20px)); /* subtract image width and margin from container width */
