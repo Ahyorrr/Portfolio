@@ -236,6 +236,10 @@ p {
   h1, h2, h3, p, .logo span, .project-link, .contact-info p, #footer p {
     font-size: 0.875em;
   }
+   .about-text {
+     
+      text-align: center;
+     }
 }
 
 /* Tablet devices (768px and up) */
